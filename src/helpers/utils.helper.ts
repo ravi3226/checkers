@@ -84,6 +84,7 @@ export const verifyJwt = ( token: string ) : TokenStatus => {
         }
     }
 }
+
 export const PrintMessage = (message: string) : void => {
-    console.log(`${message} | time : ${(new Date()).toString()}`)
+    console.log(`${message} \t \t | time : ${new Date().toISOString()}`)
 }

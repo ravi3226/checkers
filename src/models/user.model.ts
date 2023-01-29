@@ -1,6 +1,6 @@
-import mongoose, { Schema, model } from 'mongoose'
+import mongoose from 'mongoose'
 
-const UserCollectionSchema : Schema = new Schema({
+const UserCollectionSchema : mongoose.Schema = new mongoose.Schema({
     email: {
         type: String,
         required: [true, "'email' is required"],
@@ -32,4 +32,4 @@ UserCollectionSchema.path("email").validate(async (email) => {
     return !count;
 }, "'email' already registered.");
 
-export const User = model("user", UserCollectionSchema);
+export const User: mongoose.Model<any> = mongoose.model("user", UserCollectionSchema);

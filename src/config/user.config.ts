@@ -11,7 +11,10 @@ export interface Token {
 export interface TokenStatus {
     validate: boolean,
     message: string,
-    id?: string
+    id?: string,
+    token?: string,
+    expires?: string,
+    user?: object
 }
 
 export interface AuthUserSchema {

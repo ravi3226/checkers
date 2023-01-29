@@ -1,4 +1,17 @@
 # users
 - user:register
 - user:register:success
-- user:register;fail
+- user:register:fail
+
+- user:login
+- user:login:success
+- user:login:fail
+
+- token:refresh
+- token:refresh:success
+- token:refresh:fail
+
+# game
+- game:create-bot
+- game:create-bot:success
+- game:create-bot:fail

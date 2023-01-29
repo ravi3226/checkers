@@ -73,6 +73,6 @@ export const verifyJwt = (token) => {
     }
 };
 export const PrintMessage = (message) => {
-    console.log(`${message} | time : ${(new Date()).toString()}`);
+    console.log(`${message} \t \t | time : ${new Date().toISOString()}`);
 };
 //# sourceMappingURL=utils.helper.js.map

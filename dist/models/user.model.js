@@ -1,5 +1,5 @@
-import mongoose, { Schema, model } from 'mongoose';
-const UserCollectionSchema = new Schema({
+import mongoose from 'mongoose';
+const UserCollectionSchema = new mongoose.Schema({
     email: {
         type: String,
         required: [true, "'email' is required"],
@@ -28,5 +28,5 @@ UserCollectionSchema.path("email").validate(async (email) => {
     const count = await mongoose.models.user.countDocuments({ email });
     return !count;
 }, "'email' already registered.");
-export const User = model("user", UserCollectionSchema);
+export const User = mongoose.model("user", UserCollectionSchema);
 //# sourceMappingURL=user.model.js.map
