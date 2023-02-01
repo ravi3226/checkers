@@ -88,3 +88,7 @@ export const verifyJwt = ( token: string ) : TokenStatus => {
 export const PrintMessage = (message: string) : void => {
     console.log(`${message} \t \t | time : ${new Date().toISOString()}`)
 }
+
+export const addMinutes = (date: Date, minutes: number) : Date => {
+    return new Date(date.getTime() + minutes*60000);
+}

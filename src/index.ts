@@ -18,12 +18,12 @@ connectToRedis().then(() => {
             }
         });
     
-        io.on('connection', (socket: Socket) => {
+        io.on('connection', async (socket: Socket) => {
             PrintMessage(`new socket connection : ${socket.id}`);
             socket.on('user:register', (payload) => registerUser(io, socket, payload))
             socket.on('user:login', (payload) => loginUser(io, socket, payload))
             socket.on('token:refresh', (payload) => refreshToken(io, socket, payload))
-            socket.on('game:create-bot', (payload) => createGameWithBot(io, socket, payload))
+            socket.on('game:create-bot', async (payload) => await createGameWithBot(io, socket, payload))
         })
     
     

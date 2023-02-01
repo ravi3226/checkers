@@ -12,3 +12,17 @@ export const redisConfig: Redis = {
     host: process.env.REDIS_HOST,
     protocol: process.env.REDIS_PROTOCOL
 }
+
+export interface RedisStoredValue {
+    success: boolean,
+    message?: string,
+    value: any
+}
+
+export interface RedisClientResult {
+    success: boolean,
+    message?: string,
+    value: any
+}
+
+export const BotGameTurn = 'BotGameTurn'

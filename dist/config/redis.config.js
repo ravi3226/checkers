@@ -5,4 +5,5 @@ export const redisConfig = {
     host: process.env.REDIS_HOST,
     protocol: process.env.REDIS_PROTOCOL
 };
+export const BotGameTurn = 'BotGameTurn';
 //# sourceMappingURL=redis.config.js.map

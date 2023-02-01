@@ -11,3 +11,22 @@ export interface GameBoard {
     player1: object,
     player2: object
 }
+
+export interface UserGameResult {
+    found: boolean,
+    game?: object
+}
+
+export interface PlayerAndBotPair {
+    success: boolean,
+    message?: string,
+    newGameBoard?: object
+    realPlayer?: object,
+    botPlayer?: object
+}
+
+export interface NewlyRegisterGame {
+    success: boolean,
+    message?: string,
+    game?: object
+}

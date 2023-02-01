@@ -16,12 +16,12 @@ connectToRedis().then(() => {
                 origin: "http://localhost:3000"
             }
         });
-        io.on('connection', (socket) => {
+        io.on('connection', async (socket) => {
             PrintMessage(`new socket connection : ${socket.id}`);
             socket.on('user:register', (payload) => registerUser(io, socket, payload));
             socket.on('user:login', (payload) => loginUser(io, socket, payload));
             socket.on('token:refresh', (payload) => refreshToken(io, socket, payload));
-            socket.on('game:create-bot', (payload) => createGameWithBot(io, socket, payload));
+            socket.on('game:create-bot', async (payload) => await createGameWithBot(io, socket, payload));
         });
         httpServer.listen(serverConfig.port, () => {
             PrintMessage(`Server is running on port : ${serverConfig.port}`);

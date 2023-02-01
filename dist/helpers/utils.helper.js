@@ -75,4 +75,7 @@ export const verifyJwt = (token) => {
 export const PrintMessage = (message) => {
     console.log(`${message} \t \t | time : ${new Date().toISOString()}`);
 };
+export const addMinutes = (date, minutes) => {
+    return new Date(date.getTime() + minutes * 60000);
+};
 //# sourceMappingURL=utils.helper.js.map

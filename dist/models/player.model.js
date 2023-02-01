@@ -20,10 +20,6 @@ const playerCollectionSchema = new mongoose.Schema({
         type: [String],
         required: true
     },
-    oponent: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'player'
-    },
     realOrNot: {
         type: Boolean,
         default: false,
